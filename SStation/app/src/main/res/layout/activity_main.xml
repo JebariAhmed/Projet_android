@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <ImageView
+        style="@style/mainimgv1"
+        android:id="@+id/imageView"
+        
+        android:src="@drawable/background_image_one_signin" />
+    
+    <ImageView
+        style="@style/mainimgv2"
+        android:src="@drawable/ss1"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        />
+    
+    <TextView
+        style="@style/maintextv"
+        android:id="@+id/textView2"
+        android:text="My Smart\nStation"
+        />
+    
+    <LinearLayout
+        style="@style/linearstyle"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="102dp">
+        <EditText
+            android:id="@+id/email"
+            style="@style/edittext"
+            android:background="@drawable/draw"
+            android:hint="email"
+            android:inputType="textEmailAddress" />
+        
+        <EditText
+            android:id="@+id/password"
+            style="@style/edittext"
+            android:background="@drawable/draw"
+            android:hint="Password"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            />
+        
+        <RelativeLayout
+            style="@style/relastyle"
+            >
+    
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/login"
+                style="@style/butstyle"
+                android:layout_centerInParent="true"
+                android:src="@drawable/round_arrow_forward_24"
+                tools:ignore="RelativeOverlap,SpeakableTextPresentCheck" />
+    
+            <TextView
+                style="@style/TextView"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp">
+    
+            <TextView
+                style="@style/TextView"
+                android:id="@+id/register"
+                android:onClick="OpenSignupPage"
+                android:text="Sign up"
+                android:textSize="18sp"
+                tools:ignore="OnClick" />
+    
+            <TextView
+                style="@style/TextView"
+                android:text="Forgot Password"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
